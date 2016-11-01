@@ -21,7 +21,14 @@
 
 
 -(void) addContact:(Contact *) newContact {
-    self.contacts = [NSMutableArray arrayWithObjects: newContact, nil];
+    [self.contacts addObject:newContact];
+}
+
+-(void) printList {
+    for (Contact *item in self.contacts) {
+        NSLog(@"%lu - %@", (unsigned long)[self.contacts indexOfObject:item], item.fullname);
+    }
+    
 }
 
 @end

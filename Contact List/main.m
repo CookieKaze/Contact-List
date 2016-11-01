@@ -28,10 +28,12 @@ int main(int argc, const char * argv[]) {
                 newContact.fullname = fullName;
                 NSString * emailaddress  = [input inputForPrompt:@"email"];
                 newContact.email = emailaddress;
-                
                 [contactList addContact:newContact];
                 
+            } else if ([userChoice isEqualToString:@"list"]){
+                [contactList printList];
             }
+            
             
         }
     }
