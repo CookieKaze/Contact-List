@@ -10,4 +10,7 @@
 
 @interface Contact : NSObject
 
+@property NSString * fullname;
+@property NSString * email;
+
 @end
