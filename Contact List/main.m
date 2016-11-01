@@ -14,6 +14,8 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         InputCollector *input = [[InputCollector alloc] init];
+        ContactList *contactList = [[ContactList alloc] init];
+        
         while (true) {
             NSString * userChoice = [input inputForPrompt:@"show menu"];
             
@@ -27,11 +29,9 @@ int main(int argc, const char * argv[]) {
                 NSString * emailaddress  = [input inputForPrompt:@"email"];
                 newContact.email = emailaddress;
                 
-                NSLog(@"%@ %@",newContact.fullname, newContact.email);
+                [contactList addContact:newContact];
+                
             }
-            
-            
-            
             
         }
     }
